@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="CSS/contact.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+        <li><a href="cv.html"><i class='fa fa-fw fa-user'></i>CV</a></li>
+        <li><a href="blog.html"><i class='fa fa-fw fa-file'></i>Blog</a></li>
+        <li><a href="research.html"><i class="fa fa-fw fa-search"></i>Research</a></li>
+        <li><a href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+      </ul>
+    </nav>
+    <section class="contact-form">
+
+        <!--making form-->
+      <form name="form-name" onsubmit="myFunction()">
+        <div >
+          <h1>Contact Form <br></h1>
+          <div class="box">
+
+            <label>Full Name :</label>
+            <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required="">
+
+
+            <label>Email :</label>
+            <input type="Email" name="email" class="form-control" placeholder="Enter Your Email" required="">
+
+            <label>Phone Number :</label>
+            <input type="Number" name="number" class="form-control" placeholder="Enter Your Phone Number" required="">
+
+            <label>Message :</label>
+            <textarea type="text" name="text" class="form-control" placeholder="Message"></textarea>
+
+            <button type="submit" class="form-control-submit">Submit</button>
+            </div>
+        </div>
+       </form>
+    </section>
+    <footer>
+      <div class="footer-main-div">
+
+        <div class="footer-social-icons">
+          <ul>
+             <li><a href="https://www.facebook.com/profile.php?id=surakshya.shrestha " target="blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/surakshya.shrestha/?hl=en" target="blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="blank"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="https://www.youtube.com/" target="blank"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+        </div>
+
+      <div class="footer-bottom">
+        <p>Website Developed By Surakshya Shrestha &copy; 2020</p>
+      </div>
+    </footer>
+    <!--javascript for the alert message-->
+    <script type="text/javascript">
+      function myFunction(){
+        var name = document.forms["form-name"]["name"].value;
+        var email = document.forms["form-name"]["email"].value;
+        var mobile = document.forms["form-name"]["number"].value;
+        var message = document.forms["form-name"]["text"].value;
+
+        if (name == "" || mobile == "" || message == ""){
+          alert("Fill all the fields!");
+        }
+        else{
+          alert("Message successfully sent.")
+        }
+      }
+    </script>
+  </body>
+</html>
